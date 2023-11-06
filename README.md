@@ -1,11 +1,8 @@
 # zig-mbedtls-example
 
-An Example of using mbedtls with Zig v11
+An example of using mbedtls with Zig v11.
 
-This is a translation of the ssl_server.c example in mbedtls.
-
-https://github.com/Mbed-TLS/mbedtls/blob/development/programs/ssl/ssl_server.c
-
+This is a translation of the [ssl_server.c]((https://github.com/Mbed-TLS/mbedtls/blob/development/programs/ssl/ssl_server.c)) example from the [mbedtls github](https://github.com/Mbed-TLS/mbedtls).
 
 The src directory contains a single file that has the mbedTLS struct that contains all the functions needed to make a ssl server.
 
