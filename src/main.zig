@@ -150,7 +150,8 @@ pub const mbedTLS = struct {
         }
 
         c.mbedtls_ssl_set_bio(self.ssl, self.client_fd, c.mbedtls_net_send, c.mbedtls_net_recv, null);
-
+        
+        ret = c.mbedtls_ssl_handshake(self.ssl);
         while (ret != 0) : (ret = c.mbedtls_ssl_handshake(self.ssl)) {
             if (ret != c.MBEDTLS_ERR_SSL_WANT_READ and ret != c.MBEDTLS_ERR_SSL_WANT_WRITE) {
                 std.debug.print("SSL Handshake Failed: {}\n", .{ret});
